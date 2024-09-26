@@ -4,6 +4,8 @@ import { DatePickerContext } from "./contexts/DatePickContext";
 import ReccuringOptions from "./ReccuringOptions";
 import DateRanges from "./DateRanges";
 import MiniCalender from "./MiniCalender";
+import Weeklyoptions from "./Weeklyoptions";
+import NthDayOptions from "./Weeklyoptions";
 
 const DatePickingComponent = () => {
   const { recurrency, setRecurrency, selectedDates } =
@@ -19,6 +21,12 @@ const DatePickingComponent = () => {
 
         {/* Selecting the desired date ranges */}
         <DateRanges />
+
+        {/* weekly selection options */}
+        <Weeklyoptions />
+
+        {/* select by nth day */}
+        <NthDayOptions />
 
         {/* Previewing the calendar */}
         <MiniCalender dates={selectedDates} />

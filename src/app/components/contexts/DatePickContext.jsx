@@ -31,16 +31,43 @@ export const DatePickContextProvider = ({ children }) => {
         break;
       case "weekly":
         while (currentDate <= new Date(recurrency.endDate)) {
-          date.push(currentDate);
-          currentDate = addWeeks(currentDate, recurrency.customization.every);
+          if (
+            recurrency.customization.specificDays.includes(currentDate.getDay())
+          ) {
+            date.push(currentDate);
+          }
+
+          currentDate = addWeeks(currentDate, 1);
         }
         break;
 
       case "monthly":
         while (currentDate <= new Date(recurrency.endDate)) {
-          date.push(currentDate);
-          currentDate = addMonths(currentDate, recurrency.customization.every);
+          let count = 0;
+          let daysInMonth = new Date(
+            currentDate.getFullYear(),
+            currentDate.getMonth() + 1,
+            0
+          ).getDate();
+
+          for (let i = 1; i <= daysInMonth; i++) {
+            let date = new Date(
+              currentDate.getFullYear(),
+              currentDate.getMonth(),
+              i
+            );
+            if (date.getDay() === recurrency.customization.nthDayOfWeek) {
+              count++;
+              if (count === recurrency.customization.nthDay) {
+                date.push(date);
+                break;
+              }
+            }
+          }
+
+          currentDate = addMonths(currentDate, 1);
         }
+
         break;
       case "yearly":
         while (currentDate <= new Date(recurrency.endDate)) {
