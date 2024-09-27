@@ -12,7 +12,7 @@ const MiniCalendar = ({ dates }) => {
               key={index}
               className="px-4 py-4 bg-gray-500 text-center text-white shadow-md shadow-black"
             >
-              {new Date(date).toLocaleDateString()} {/* Format date */}
+              {new Date(date).toLocaleDateString()}
             </div>
           ))}
         </div>
