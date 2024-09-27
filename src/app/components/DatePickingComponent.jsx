@@ -21,6 +21,10 @@ const DatePickingComponent = () => {
     }
   }, [recurrency]);
 
+  useEffect(() => {
+    console.log("Selected Dates:", selectedDates); // Debugging output for selected dates
+  }, [selectedDates]);
+
   return (
     <div className="bg-gradient-to-r from-slate-300 to-slate-500 shadow-xl shadow-black px-6 py-7 ">
       <h1 className="mb-6 font-bold text-red-800 text-xl">Manage your Dates</h1>

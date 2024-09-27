@@ -13,7 +13,7 @@ const NthDayOptions = () => {
     { name: "Friday", value: 5 },
     { name: "Saturday", value: 6 },
   ];
-  const nthOptions = [1, 2, 3, 4, 5]; // 1st, 2nd, 3rd, 4th, Last
+  const nthOptions = [1, 2, 3, 4, 5];
 
   const handleNthChange = (e) => {
     setRecurrency({
@@ -30,7 +30,7 @@ const NthDayOptions = () => {
       ...recurrency,
       customization: {
         ...recurrency.customization,
-        nthDayOfWeek: parseInt(e.target.value), // Convert to integer
+        nthDayOfWeek: parseInt(e.target.value),
       },
     });
   };
