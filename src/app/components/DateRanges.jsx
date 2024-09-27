@@ -22,7 +22,8 @@ const DateRanges = () => {
           type="date"
           value={recurrency.startDate || ""}
           onChange={handleStartingDate}
-          className="bg-gray-300 px-4 py-1"
+          className="border rounded-md outline-none px-4 py-1"
+          min={recurrency.startDate || ""}
         />
       </section>
 
@@ -33,7 +34,8 @@ const DateRanges = () => {
           type="date"
           value={recurrency.endDate || ""}
           onChange={handleEndingDate}
-          className="bg-gray-300 px-4 py-1"
+          className="border rounded-md outline-none px-4 py-1"
+          min={recurrency.endDate || ""}
         />
       </section>
     </div>
