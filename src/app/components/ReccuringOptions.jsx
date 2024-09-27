@@ -25,6 +25,7 @@ const ReccuringOptions = () => {
         <label htmlFor="pattern">Select the Recurrence Pattern:</label>
         <select
           name="pattern"
+          id="pattern"
           value={recurrency.pattern}
           onChange={handlePatternChange}
           className="border rounded-md outline-none px-4 py-1"
@@ -50,6 +51,7 @@ const ReccuringOptions = () => {
         </label>
         <input
           type="number"
+          id="every"
           value={recurrency.customization.every}
           name="every"
           min="1"
