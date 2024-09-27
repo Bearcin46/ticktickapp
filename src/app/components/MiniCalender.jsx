@@ -25,6 +25,7 @@ const MiniCalendar = ({ dates }) => {
           <Image
             src={nothingImage}
             className="h-48 w-48 drop-shadow-[0_35px_35px_rgba(10,120,100,0.75)]"
+            alt="Currently you dont have any tasks."
           />
         </div>
       )}
