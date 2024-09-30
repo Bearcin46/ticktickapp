@@ -26,7 +26,7 @@ const DatePickingComponent = () => {
   }, [selectedDates]);
 
   return (
-    <div className="bg-gradient-to-r from-slate-300 to-slate-500 shadow-xl shadow-black px-6 py-7 ">
+    <div className="bg-slate-500 shadow-xl shadow-black  rounded-lg px-6 py-7 ">
       <h1 className="mb-6 font-bold text-red-800 text-xl">Manage your Dates</h1>
       <section className="flex flex-col gap-4">
         <ReccuringOptions />

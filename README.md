@@ -1,4 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a _Project date Management App project_ created with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Project Objective
+
+To create an app that can be used to manage the dates.
+
+## Features
+
+- User can select the dates in recurrence manner.
+- They can select it in daily, weekly, monthly, yearly basis.
+- They can also select the nth day of the week or month or year.
+
+## Tech Stack used
+
+- Next JS
+- Javascript
+- Tailwind CSS
+- Date-fns
+- React Test Library
+- Jest
 
 ## Getting Started
 
@@ -20,14 +39,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## State Management
 
-To learn more about Next.js, take a look at the following resources:
+For the state management, the app uses CONTEXT API concept.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Testing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Unit testing and Integration testing is done using React Test Library and Jest.
+
+## Work Flow
+
+- Install the dependencies.
+- Get started from Page.jsx.
+- Create the components.
+- Add logic to select the dates.
+- Once logic is completed, try to select dates based on customization.
+- Get the data from user and then use the logic to get the result.
+- Final result to be shown in mini calender.
 
 ## Deploy on Vercel
 
