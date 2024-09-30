@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Task Management Calender",
+  title: "Date Management App",
   description: "An app to manage you dates",
 };
 
